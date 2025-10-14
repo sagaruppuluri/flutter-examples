@@ -1,5 +1,7 @@
 # MiniProject
 
+## Refer Prerequisites.md for pre-requisites.
+
 ## Setup the DB 
 
 * Install MySQL 
