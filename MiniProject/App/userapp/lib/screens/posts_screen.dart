@@ -41,7 +41,12 @@ class _PostsScreenState extends State<PostsScreen> {
   void logout() async {
     ApiService().logout();
     if (mounted) {
-      Navigator.pushReplacementNamed(context, AppRoutes.login);
+      // Navigator.pushReplacementNamed(context, AppRoutes.login);
+      Navigator.pushNamedAndRemoveUntil(
+        context,
+        AppRoutes.login,
+        (route) => false,
+      );
     }
   }
 

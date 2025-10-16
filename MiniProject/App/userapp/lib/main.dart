@@ -8,16 +8,11 @@ final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 Future<void> main() async {
   await dotenv.load(fileName: ".env");
-  String? token = await AuthService.getToken();
-  runApp(
-    MyApp(initialRoute: token == null ? AppRoutes.login : AppRoutes.posts),
-  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final String initialRoute;
-
-  const MyApp({super.key, required this.initialRoute});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
